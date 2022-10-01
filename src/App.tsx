@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TitlePage from 'pages/TitlePage';
+import AboutPage from 'pages/AboutPage';
+import ContactPage from 'pages/ContactPage';
+import { StyleSheet, css } from 'aphrodite';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={css(styles.page)}>
+      <TitlePage />
+      <AboutPage />
+      <ContactPage />
     </div>
   );
 }
+
+const styles = StyleSheet.create({
+  page: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  header: {
+    flex: '1 1 auto',
+  },
+});
 
 export default App;
