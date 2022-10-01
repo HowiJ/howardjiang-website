@@ -11,6 +11,7 @@ function AboutPage(props: Props): React.ReactElement {
     <Page height="full">
       <div className={css(styles.page)}>
         <Text heading="h1">About</Text>
+        <Text heading="p">Software Engineer</Text>
       </div>
     </Page>
   );

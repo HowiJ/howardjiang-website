@@ -12,7 +12,7 @@ type Props = Readonly<{}>;
 
 function TitlePage(props: Props): React.ReactElement {
   return (
-    <Page height="full">
+    <Page height="initial">
       <div className={css(styles.page)}>
         <div className={css(styles.lines)}>
           <div className={css(styles.header)}>
@@ -22,6 +22,7 @@ function TitlePage(props: Props): React.ReactElement {
           <TitleLine origin="left" />
           <TitleLine origin="right" />
         </div>
+        <Text heading="p">Software Engineer</Text>
         <div className={css(styles.links)}>
           <Link
             icon={<FontAwesomeIcon icon={faLinkedin} />}
@@ -54,9 +55,8 @@ const nameKeyframes = [
 const styles = StyleSheet.create({
   page: {
     flex: '1 1 auto',
-    paddingTop: '4em',
     '@media (max-width: 800px)': {
-      paddingTop: '2em',
+      paddingTop: '32px',
     },
   },
   header: {
@@ -69,12 +69,13 @@ const styles = StyleSheet.create({
   },
   lines: {
     position: 'relative',
+    marginBottom: '32px',
   },
   links: {
     flex: '1 1 auto',
     display: 'flex',
     gap: '12px',
-    paddingTop: '2rem',
+    paddingTop: '32px',
     '@media (max-width: 800px)': {
       justifyContent: 'space-between',
       textAlign: 'left',
