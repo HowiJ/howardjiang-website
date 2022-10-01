@@ -8,18 +8,18 @@ type Props = Readonly<{
 
 function Page({ children, height = 'initial' }: Props): React.ReactElement {
   return (
-    <div className={css(styles.page, height === 'full' && styles.fullHeight)}>
+    <div className={css(styles.main, height === 'full' && styles.fullHeight)}>
       {children}
     </div>
   );
 }
 
 const styles = StyleSheet.create({
-  page: {
+  main: {
     flex: '1 1 auto',
     display: 'flex',
     outline: '1px solid #EEEEEE',
-    paddingLeft: '32px',
+    padding: '32px',
   },
   fullHeight: {
     minHeight: '100vh',
