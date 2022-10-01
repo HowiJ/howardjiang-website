@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
   main: {
     flex: '1 1 auto',
     display: 'flex',
-    outline: '1px solid #EEEEEE',
     padding: '32px',
   },
   fullHeight: {

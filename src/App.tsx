@@ -9,7 +9,9 @@ import FadeIn from 'components/FadeIn';
 function App() {
   return (
     <div className={css(styles.page)}>
-      <TitlePage />
+      <FadeIn>
+        <TitlePage />
+      </FadeIn>
       <FadeIn>
         <AboutPage />
       </FadeIn>

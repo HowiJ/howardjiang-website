@@ -1,4 +1,4 @@
-import type { Align, Heading } from 'components/TextTypes';
+import type { Align, Display, Heading } from 'components/TextTypes';
 
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
@@ -7,9 +7,15 @@ type Props = Readonly<{
   align?: Align;
   children?: React.ReactNode;
   heading?: Heading;
+  display?: Display;
 }>;
 
-function Text({ children, heading = 'p', align = 'left' }: Props) {
+function Text({
+  children,
+  heading = 'p',
+  align = 'left',
+  display = 'inline',
+}: Props) {
   return (
     <span
       className={css(
@@ -18,6 +24,7 @@ function Text({ children, heading = 'p', align = 'left' }: Props) {
         heading === 'h1' && styles.h1,
         heading === 'p' && styles.p,
         heading === 't' && styles.t,
+        display === 'block' && styles.displayBlock,
       )}
     >
       {children}
@@ -35,8 +42,11 @@ const styles = StyleSheet.create({
   },
   h1: {
     display: 'block',
-    fontSize: '32px',
+    fontSize: '40px',
     fontWeight: 'lighter',
+    '@media (max-width: 800px)': {
+      fontSize: '32px',
+    },
   },
   t: {
     display: 'block',
@@ -51,6 +61,9 @@ const styles = StyleSheet.create({
   },
   alignCenter: {
     textAlign: 'center',
+  },
+  displayBlock: {
+    display: 'block',
   },
 });
 

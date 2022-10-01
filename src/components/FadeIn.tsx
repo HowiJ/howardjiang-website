@@ -19,15 +19,13 @@ function FadeIn({ children, threshold = 0.5 }: Props): React.ReactElement {
         );
         setIsVisible(isVisible);
       },
-      {
-        threshold: threshold ?? 0.7,
-      },
+      { threshold },
     );
     observer.observe(domRef.current!);
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [threshold]);
   return (
     <span
       ref={domRef}
@@ -59,6 +57,9 @@ const styles = StyleSheet.create({
     animationName: [[], opacityKeyframes],
     animationDuration: '2s',
     'animation-fill-mode': 'forwards',
+    '@media (max-width: 800px)': {
+      opacity: 1,
+    },
   },
   visible: {
     opacity: 1,

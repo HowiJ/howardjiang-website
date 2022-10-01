@@ -8,10 +8,16 @@ type Props = Readonly<{}>;
 
 function AboutPage(props: Props): React.ReactElement {
   return (
-    <Page height="full">
+    <Page height="initial">
       <div className={css(styles.page)}>
         <Text heading="h1">About</Text>
-        <Text heading="p">Software Engineer</Text>
+        <Text display="block">
+          I'm Howard Jiang, a software engineer well versed in full stack
+          technologies.
+        </Text>
+        <Text display="block">
+          Feel free to check out my LinkedIn for more information.
+        </Text>
       </div>
     </Page>
   );

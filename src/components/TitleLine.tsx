@@ -33,7 +33,7 @@ const translateKeyframesRight = [
       right: '0',
     },
     '100%': {
-      right: 'calc(100vw - 320px)',
+      right: 'calc(100vw - 352px)',
     },
   },
 ];
@@ -43,7 +43,7 @@ const translateKeyframesRightResp = [
       right: '0',
     },
     '100%': {
-      right: 'calc(100vw - 200px)',
+      right: 'calc(100vw - 232px)',
     },
   },
 ];
@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     animationDuration: '1s',
     'animation-fill-mode': 'forwards',
     '@media (max-width: 800px)': {
+      top: '-2px',
       animationName: [translateKeyframesRightResp],
       width: '128px',
     },
