@@ -21,9 +21,11 @@ function Text({
       className={css(
         align === 'center' && styles.alignCenter,
         align === 'left' && styles.alignLeft,
+        heading === 'm' && styles.m,
         heading === 'h1' && styles.h1,
-        heading === 'p' && styles.p,
         heading === 't' && styles.t,
+        heading === 'p' && styles.p,
+        heading === 'link' && styles.link,
         display === 'block' && styles.displayBlock,
       )}
     >
@@ -33,27 +35,40 @@ function Text({
 }
 
 const styles = StyleSheet.create({
-  p: {
-    fontSize: '16px',
+  m: {
+    // massive
+    fontSize: 'calc(160px + 5vw)',
     fontWeight: 'lighter',
     '@media (max-width: 800px)': {
-      fontSize: '24px',
+      fontSize: 'calc(96px + 1vw)',
+    },
+  },
+  t: {
+    fontSize: '80px',
+    fontWeight: 'lighter',
+    '@media (max-width: 800px)': {
+      fontSize: '48px',
     },
   },
   h1: {
-    display: 'block',
     fontSize: '40px',
     fontWeight: 'lighter',
     '@media (max-width: 800px)': {
       fontSize: '32px',
     },
   },
-  t: {
-    display: 'block',
-    fontSize: '80px',
+  p: {
+    fontSize: '16px',
     fontWeight: 'lighter',
     '@media (max-width: 800px)': {
-      fontSize: '48px',
+      fontSize: '20px',
+    },
+  },
+  link: {
+    fontSize: '12px',
+    fontWeight: 'lighter',
+    '@media (max-width: 800px)': {
+      fontSize: '12px',
     },
   },
   alignLeft: {

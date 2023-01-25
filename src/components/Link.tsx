@@ -18,7 +18,7 @@ function Link({
   align = 'left',
   children,
   display = 'inline',
-  heading = 'p',
+  heading = 'link',
   icon,
   src,
 }: Props): React.ReactElement {

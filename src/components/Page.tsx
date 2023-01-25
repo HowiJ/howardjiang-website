@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   main: {
     flex: '1 1 auto',
     display: 'flex',
-    padding: '32px',
+    padding: '16px 32px',
   },
   fullHeight: {
     minHeight: '100vh',

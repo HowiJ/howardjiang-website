@@ -3,7 +3,6 @@ import { StyleSheet, css } from 'aphrodite';
 
 import TitlePage from 'pages/TitlePage';
 import AboutPage from 'pages/AboutPage';
-import ContactPage from 'pages/ContactPage';
 import FadeIn from 'components/FadeIn';
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
       <FadeIn>
         <AboutPage />
       </FadeIn>
-      <ContactPage />
     </div>
   );
 }
@@ -24,6 +22,8 @@ const styles = StyleSheet.create({
   page: {
     display: 'flex',
     flexDirection: 'column',
+    margin: 'auto',
+    maxWidth: 'min-content',
   },
   header: {
     flex: '1 1 auto',
